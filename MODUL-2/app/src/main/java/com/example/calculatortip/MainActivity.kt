@@ -27,14 +27,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Inisialisasi view
         costOfServiceEditText = findViewById(R.id.cost_of_service_edit_text)
         tipOptions = findViewById(R.id.tip_options)
         roundUpSwitch = findViewById(R.id.round_up_switch)
         calculateButton = findViewById(R.id.calculate_button)
         tipResultTextView = findViewById(R.id.tip_result)
 
-        // Restore state setelah rotasi
         if (savedInstanceState != null) {
             costOfServiceEditText.setText(savedInstanceState.getString(KEY_COST, ""))
             tipResultTextView.text = savedInstanceState.getString(KEY_TIP_RESULT, "")
